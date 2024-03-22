@@ -20,11 +20,11 @@ Clone the repository:
 git clone https://github.com/Obedaya/WLED-HA-Bambu
 ```
 
-#### WLED
+### WLED
 ---
 First of all you have to add the preset to your WLED LED Matrix.
 
-##### 8 x 32 Matrix
+#### 8 x 32 Matrix
 If you have a 8 x 32 big Matrix, it's your lucky day.
 
 If you have no other presets, you can just go to [http://[Your-WLED-IP]/edit](http://[Your-WLED-IP]/edit) and upload presets.json. (ATTENTION: This will override you current presets!)
@@ -38,13 +38,13 @@ At the end you file should look something like this:
 ```
 Then upload the file to [http://[Your-WLED-IP]/edit](http://[Your-WLED-IP]/edit)
 
-##### Different sized Matrix
+#### Different sized Matrix
 
 If you have a different sized Matrix, you have to manualy create the effect. You need 2 overlapping segments. Call one "background" and select the "Percent" effect and set the intensity to 0. Then deselect the segment and create a new one with the name "foreground". For this segment you need to select the "scrolling-text" effect. At this point you can also change the color to your liking.
 
 If you are done, deselect the foreground and select the background and save the preset in its current state.
 
-#### Home Assistant
+### Home Assistant
 ---
 Coming soon
 
