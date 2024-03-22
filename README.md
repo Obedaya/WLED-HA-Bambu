@@ -34,13 +34,13 @@ Note: You probably have to change the id at the beginning, so that you don't hav
 
 At the end you file should look something like this:
 ```json
-{"0":{},"1":{content of preset 1},"2":{content of preset 2}}
+{"0":{},"1":{"content of preset 1"},"2":{"content of preset 2"}}
 ```
 Then upload the file to [http://[Your-WLED-IP]/edit](http://[Your-WLED-IP]/edit)
 
 ##### Different sized Matrix
 
-You have to manualy create the effect. You need 2 overlapping segments. Call one "background" and select the "Percent" effect and set the intensity to 0. Then deselect the segment and create a new one with the name "foreground". For this segment you need to select the "scrolling-text" effect. At this point you can also change the color to your liking.
+If you have a different sized Matrix, you have to manualy create the effect. You need 2 overlapping segments. Call one "background" and select the "Percent" effect and set the intensity to 0. Then deselect the segment and create a new one with the name "foreground". For this segment you need to select the "scrolling-text" effect. At this point you can also change the color to your liking.
 
 If you are done, deselect the foreground and select the background and save the preset in its current state.
 
