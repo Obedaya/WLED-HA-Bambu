@@ -46,6 +46,15 @@ If you are done, deselect the foreground and select the background and save the 
 
 ### Home Assistant
 ---
-Coming soon
+Now you need to integrate the Home Assistant Automation in your Home Assistant instance.
+
+To do that, you first have to create a new automation and paste the content of ha_led_progress_automation.yaml into the newly created automation. (You can change to yaml in the top right corner)
+
+Then you have to replace the placeholders (Text Including the sqaure brackets) with the corresponding IDs. 
+
+Tip: Sometimes you can use the visual editor, to select the right ID
+
+You can also add a script, that automatically turns of the matrix 5 min after the print finished. Just repeat the steps from before with ha_print_finished_automation.yaml
 
 ## Usage
+
