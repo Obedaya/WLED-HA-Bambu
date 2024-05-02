@@ -1,0 +1,32 @@
+alias: Led Printer Progress
+description: ""
+trigger:
+  - platform: device
+    device_id: [Replace with ID of Bambuprinter]
+    domain: bambu_lab
+    type: event_print_started
+  - platform: state
+    entity_id:
+      - sensor.[Replace with Print Progress Sensor]
+condition:
+  - condition: device
+    type: is_on
+    device_id: [Replace with ID of Bambuprinter]
+    entity_id: [Replace with Bambu Light Entity ID]
+    domain: light
+action:
+  - service: light.turn_on
+    data: {}
+    target:
+      device_id: [Replace with ID of Matrix]
+  - service: select.select_option
+    data:
+      option: Percent
+    target:
+      device_id: [Replace with ID of Matrix]
+  - service: number.set_value
+    data:
+      value: "{{ states('sensor.[Replace with Print Progress Sensor]') | float }}"
+    target:
+      entity_id: number.led_panel_intensity
+mode: single

@@ -1,0 +1,24 @@
+alias: Print finished
+description: ""
+trigger:
+  - platform: device
+    device_id: [Replace with ID of Bambuprinter]
+    domain: bambu_lab
+    type: event_print_finished
+  - platform: device
+    type: turned_off
+    device_id: [Replace with ID of Bambuprinter]
+    entity_id: [Replace with Bambu Light Entity ID]
+    domain: light
+condition: []
+action:
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: [Replace with ID of Matrix]
+    entity_id: [Replace with ID of Main Segment]
+    domain: light
+mode: single
