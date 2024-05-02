@@ -2,6 +2,7 @@
 This is a tutorial on how to display your Bambulab printing progress on a WLED LED matrix via Home Assistant.  
 
 ## Changelog
+- Linked Matrix with Chamber light 
 
 ## Introduction
 In Realtime wird der Druckfortschritt auf der LED Matrix dargestellt. Im Vordergrund wird die Uhrzeit und das Datum angezeigt. Die Automation wird automatisch zu Anfang des Druckvorgangs gestartet und 5min nach Ende des Druckvorgangs gestoppt. 
